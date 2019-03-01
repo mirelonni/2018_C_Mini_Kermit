@@ -7,7 +7,7 @@ Mini Kermit packet:
 - SOH : (1 byte) start-of-header, always 0x01
 - LEN : (1 byte) length, the length that follows LEN, so length - 2
 - SEQ : (1 byte) sequence number, mod 64, first value 0x00
-- TYPE: (1 byte) the type of the packet
+- TYPE : (1 byte) the type of the packet
   - 'S' : Send-Init, first packet
   - 'F' : File Header
   - 'D' : Data
@@ -20,7 +20,7 @@ Mini Kermit packet:
 - CHECK : (2 bytes) CRC on all fields, except CHECK and MARK
 - MARK : (1 byte) marks the end of a packet, defauld 0x0D
 
-The script provided sends 3 files (file1.bin, file2.bin, file3.bin) and you can change the SPEED, DELAY. LOSS, CORRUPT percentage to simulate the network. (this is a functionality if the link emulator API)
+The script provided sends 3 files (file1.bin, file2.bin, file3.bin) and you can change the SPEED, DELAY. LOSS, CORRUPT percentage to simulate the network. (this is a functionality of the link emulator API)
 
 ```bash
 cd ./link_emulator
